@@ -13,8 +13,8 @@ def generate_text():
         },
         {
             "role" : "user",
-            "co===ntent" : prompt
-=
+            "content" : prompt
+
         }
     ]
 
