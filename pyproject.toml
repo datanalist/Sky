@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "sky"
+version = "0.1.0"
+description = "Sky from Cyberpunk 2077"
+authors = ["Mikhail Makarov <vallome@yandex.ru>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
