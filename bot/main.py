@@ -12,7 +12,7 @@ from config import *
 bot = Bot(api_key)
 dp = Dispatcher()
 
-url = "http://127.0.0.1:800/generate_text"
+url = "http://127.0.0.1:8000/generate_text"
 
 async def post_request(url, data):
     async with aiohttp.ClientSession() as session:
@@ -30,8 +30,9 @@ async def answer(message: types.Message):
     }
     answer = asyncio.create_task(post_request, data)
     response_json = await answer
-    answer_text = answer.get("text")
+    answer_text = response_json.get("text")
     await message.reply(answer_text)
+
 async def main():
     await dp.start_polling(bot)
 
